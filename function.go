@@ -146,7 +146,7 @@ func toTeams(notification Notification) MessageCard {
 	}
 }
 
-func F(w http.ResponseWriter, r *http.Request) {
+func ReportAlertToTeams(w http.ResponseWriter, r *http.Request) {
 	authToken := os.Getenv("AUTH_TOKEN")
 	if authToken == "" {
 		log.Fatalln("`AUTH_TOKEN` is not set in the environment")
